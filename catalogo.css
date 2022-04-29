@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+.imgLogo {
+    width: 20vh;
+}
+
+nav {
+    background-color: rgba(163, 156, 136, 0.98);
+    height: 7vh;
+    display: flex;
+}
+
+li a {
+    color: aliceblue !important;
+    text-decoration: none !important;
+}
+
+.menuNavegacion {
+    list-style-type: none;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    padding-left: 30vw;
+    padding-top: 2vh;
+}
+
+/* body {
+    background-color: rgb(253, 253, 253);
+} */
+
+header {
+    background-color: rgba(163, 156, 136, 0, 36);
+    min-height: 10vh;
+}
+
+footer {
+    background-color: rgba(163, 156, 136, 0.98);
+    min-height: 50vh;
+}
+
+.imagenHeader {
+    background-image: url("./img/nav01.jpg");
+    min-height: 25vh;
+    background-position: 10%;
+}
+
+main {
+    min-height: 70vh;
+    background-color: rgba(163, 156, 136, 0.448);
+}
+
+section {
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgba(163, 156, 136);
+    margin-left: 20px;
+    width: 70vw;
+}
+
+section img {
+    max-width: 200px;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.category {
+    background-color: rgba(163, 156, 136, 0.78);
+    margin: 10px;
+}
+
+#catalogoCompleto {
+    width: 90vw;
+    margin-top: 10px;
+    margin-left: 45px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.estiloCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: 0;
+    background-color: rgba(163, 156, 136, 0.75);
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    width: 16rem;
+    margin-bottom: 2vh;
+    margin-right: 2vh;
+}
+
+.card-img {
+    max-width: 200px;
+    margin-bottom: 2vh;
+}
+
+.card-Body {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+    height: 200px;
+    margin-bottom: 2vh;
+}
+
+.card-Text {
+    display: block;
+    margin-block-start: 1;
+    margin-top: 1vh;
+    margin-block-end: 1;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    line-height: 1.5;
+}
+
+.card-Titulo {
+    font-weight: 300;
+    line-height: 1.3;
+}
+
+.botones {
+    margin: 1vh;
+}
+
+#modalAbrirCarrito {
+    border: none;
+    color: black;
+    font-size: 20px;
+    width: 10vw;
+    padding: 1.5vh;
+    background-color: rgba(250, 235, 215, 0);
+}
+
+.modal-contenedor {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+
+.modal-active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 3;
+}
+
+.modal-carrito {
+    position: absolute;
+    min-width: 600px;
+    border-radius: 5px;
+    padding: 22px;
+    background-color: rgba(163, 156, 136, 0.98);
+}
+
+#modal-cerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    border: none;
+    background-color: rgba(163, 156, 136, 0.98);
+}
+
+.boton-agregar {
+    border: none;
+    background-color: rgba(83, 83, 80, 0.98);
+    color: rgb(211, 208, 208);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.boton-eliminar {
+    border: none;
+    color: red;
+    background-color: rgba(163, 156, 136, 0.98);
+    margin-bottom: 1rem;
+}
+
+.boton-agregar-c {
+    border: none;
+    color: green;
+    background-color: rgba(163, 156, 136, 0.98);
+        margin-bottom: 1rem;
+}
+
+.itemCarrito {
+    display: flex;
+    justify-content: space-between;
+    border-top: solid grey;
+}
+
+.filtrados{
+    margin-left: 20vw;
+    display: flex;
+    width: 60vw;
+    padding: 1vw;
+    background-color: rgba(250, 235, 215, 0.335);
+    justify-content: space-around;
+
+}
+#filtroCategorias{
+    margin: 10px;
+}
