@@ -66,11 +66,13 @@ section {
     width: 70vw;
 }
 
-section img {
+/* section img {
     max-width: 200px;
     padding: 10px;
-}
-
+} */
+/* img{
+    min-height: 30vh;
+} */
 h1 {
     text-align: center;
 }

@@ -8,7 +8,7 @@ const total = document.getElementById('total')
 
 //lo traigo desde bd
 const catalogoHogar1 = JSON.parse(localStorage.getItem("catalogoCompleto"))
-
+console.log(catalogoHogar1)
 
 const carrito = []
 
@@ -17,14 +17,14 @@ const carrito = []
 const mostrarCatalogo = (array) => {
     contenedorProductos.innerHTML=" "
 
-array.forEach((producto) => {
+    array.forEach((producto) => {
     const div = document.createElement('div')
     div.className = "estiloCard"
     div.innerHTML = `
-    <img src = ${producto.img}    class="card-img-top" alt = "..." >
     <div>
-    <p class="card-text rojo">${producto.categoria}</p>
+    <img src = ${producto.img}    class="card-img-top" alt = "${producto.tipo}" >
     </div>
+    <p class="card-text rojo">${producto.categoria}</p>
     <div class="card-body">
             <h5 class="card-title grande">${producto.tipo}</h5>
             <p class="card-text rojo">${producto.descripcion}</p>
@@ -74,11 +74,13 @@ const actualizaCarrito = () => {
                 <button onclick="agregarCarrito(${prod.codArt})" class="boton-agregar-c"><i class="fas fa-plus-square"></i></button>                
                 <p>Cantidad: ${prod.cantidad}</p>
                 <button onclick="eliminarItem(${prod.codArt})" class="boton-eliminar"><i class="fas fa-minus-square"></i></button>
+
             `
 
         agregaCarrito.appendChild(div)
     })
     contadorCarrito.innerText = carrito.reduce((acc, prod) => acc += prod.cantidad, 0)
+    total.innerText = carrito.reduce((acc, prod) => acc += prod.precio * prod.cantidad, 0)
 }        
 
 //eliminar Item del Carrito
@@ -111,57 +113,45 @@ modalAbrir.addEventListener('click', () => {
 modalCerrar.addEventListener('click', () => {
     modalContenedor.classList.remove('modal-active')
 })
-//=================filtros
+// =================filtros
 
 const filtroCategoria = document.getElementById('filtroCategoria')
 const filtroPrecioMin = document.getElementById('filtroPrecioMin')
 const filtroPrecioMax = document.getElementById('filtroPrecioMax')
+const filtroPrecio = document.getElementById('filtroPrecio')
 let arrayFiltrado = []
+
+let valorFiltroCategoria = filtroCategoria.value
+let valorFiltroPrecioMin = filtroPrecioMin.value
+let valorFiltroPrecioMax = filtroPrecioMax.value
+
+
+
 const filtrar = () => {
-    let valorFiltroCategoria = filtroCategoria.value
-    // let valorFiltroPrecioMin = filtroPrecioMin.value
-    let valorFiltroPrecioMax = filtroPrecioMax.value
-    console.log(valorFiltroCategoria)
-
-    if (valorFiltroCategoria == "Todos" && valorFiltroPrecioMax == "0" ) {
-        arrayFiltrado=catalogoHogar1
-    } else  {
+    if (valorFiltroCategoria == "0") {
+        arrayFiltrado = catalogoHogar1
+        
+    } else {
         arrayFiltrado = catalogoHogar1.filter(el => el.categoria == filtroCategoria.value)
-    }
-    
-    if (valorFiltroPrecioMax !== "0") {
-        arrayFiltrado = catalogoHogar1.filter(el => el.precio < filtroPrecioMax.value)
-
         console.log(arrayFiltrado)
-    // } else  if (valorFiltroPrecioMax !== "0") {
-    //     arrayFiltrado = catalogoHogar1.filter(el => el.precio <= filtroPrecioMax.value)
-
-    // } else if (valorFiltroPrecioMin !== "0" && valorFiltroPrecioMax !== "0") {
-    //     arrayFiltrado = arrayFiltrado.filter((el => el.precio <= filtroPrecioMax.value) && (el => el.precio > filtroPrecioMin.value))
-
-
     }
     
+    if (filtroPrecioMin.value > 0  ) {
+        arrayFiltrado = arrayFiltrado.filter((el) => el.precio >= filtroPrecioMin.value)
+    }
+    if (filtroPrecioMax.value > 0) {
+        arrayFiltrado = arrayFiltrado.filter((el) => el.precio <= filtroPrecioMax.value)
+    }
     mostrarCatalogo(arrayFiltrado)
-    
+    console.log(arrayFiltrado)
 }
 
 filtroCategoria.addEventListener('change', () => {
     filtrar()
-})
-// filtroPrecioMin.addEventListener('change', () => {
-//     filtrar()
-// })
-filtroPrecioMax.addEventListener('change', () => {
-    filtrar()
-}
-)
 
-// if (arrayFiltrado !== "") {
-    
-// } else {
-//     mostrarCatalogo(arrayFiltrado)
-// }
-// console.log(arrayFiltrado)
-// console.log(catalogoHogar1)
-// // mostrarCatalogo(arrayFiltrado)
+})
+filtroPrecio.addEventListener('click', () => {
+    filtrar()
+        console.log(filtroPrecioMin.value)
+        console.log(filtroPrecioMax.value)
+})

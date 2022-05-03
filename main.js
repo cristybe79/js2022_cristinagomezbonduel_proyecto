@@ -3,11 +3,11 @@ const contenedorCategory1 = document.getElementById('category1')
 
 //lo traigo desde bd por Storage
 const catalogoHogar1 = JSON.parse(localStorage.getItem("catalogoCompleto"))
-
+console.log(catalogoHogar1)
 
 ///Mostrar catalogo
 const mostrarCategoriasDecoracion = () => {
-const filtrado = catalogoHogar1.filter((producto) => producto.categoria === "decoracion")
+    const filtrado = catalogoHogar1.filter((producto) => producto.categoria === "Decoracion")
 console.log(filtrado)
 contenedorCategory1.innerHTML = ''
 filtrado.forEach((cat) => {
@@ -22,7 +22,7 @@ mostrarCategoriasDecoracion()
 
 const contenedorCategory = document.getElementById('category2')
 const mostrarCategoriasIluminacion = () => {
-const filtrado = catalogoHogar1.filter((producto) => producto.categoria === "ILUMINACION")
+const filtrado = catalogoHogar1.filter((producto) => producto.categoria === "Iluminacion")
 console.log(filtrado)
 contenedorCategory.innerHTML = ''
 filtrado.forEach((cat) => {
@@ -60,24 +60,17 @@ const errorMail = document.getElementById('mailValido')
 inputNombre.addEventListener('input', () => {
 
     let nombre = inputNombre.value
-    console.log(inputNombre.value)
-    if (nombre.length < 2) {
-        inputNombre.classList.add('input-error')
-        errorNombre.classList.add('error-mostrar')
-    } else {
-        inputNombre.classList.remove('input-error')
-        errorNombre.classList.remove('error-mostrar')
-    }
+    console.log(inputNombre.value) //
+    ///con SugarSintax////
+    nombre.length < 2 ? inputNombre.classList.add('input-error') || errorNombre.classList.add('error-mostrar') : inputNombre.classList.remove('input-error') && errorNombre.classList.remove('error-mostrar')
+
 })
 
 inputMail.addEventListener('input', () => {
-    if (inputMail.value == "") {
-        inputMail.classList.add('input-error')
-        errorMail.classList.add('error-mostrar')
-    } else {
-        inputMail.classList.remove('input-error')
-        errorMail.classList.remove('error-mostrar')
-    }
+    
+    inputMail.value == "" ? inputMail.classList.add('input-error') || errorMail.classList.add('error-mostrar') : inputMail.classList.remove('input-error') && errorMail.classList.remove('error-mostrar')
+
+
 })
 // toma los valores y los carga en un array
 const usuarioRegistrado = []
@@ -89,10 +82,11 @@ formulario.addEventListener('submit', (e) => {
     console.log(e)
     const nombre = inputNombre.value
     const mail = inputMail.value
+
     if (nombre.length > 2 && mail !=="") {
         usuarioRegistrado.push({
             nombre: nombre,
-            destino: mail,
+            mail: mail,
         })
         console.log(usuarioRegistrado)
         registroExito.classList.remove('noMostrar')
