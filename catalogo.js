@@ -45,20 +45,24 @@ const agregarCarrito = (itemAgregado) => {
     if (itemCarrito) {
         itemCarrito.cantidad++
         //lo guardo en el local Storage
+
         localStorage.setItem('carritoCompra', JSON.stringify(carrito))
     } else {
         const producto = catalogoHogar1.find((prod) => prod.codArt == itemAgregado)
 
         carrito.push({
             codArt: producto.codArt,
+            img:producto.img,
             categoria: producto.categoria,
             descripcion:producto.descripcion,
             tipo: producto.tipo,
             precio: producto.precio,
             cantidad: 1
-
+            
         })
     }
+
+    Swal.fire('Producto Agregado Correctamente')
     actualizaCarrito()
 }
 const actualizaCarrito = () => {
@@ -75,12 +79,15 @@ const actualizaCarrito = () => {
                 <p>Cantidad: ${prod.cantidad}</p>
                 <button onclick="eliminarItem(${prod.codArt})" class="boton-eliminar"><i class="fas fa-minus-square"></i></button>
 
+
             `
 
         agregaCarrito.appendChild(div)
     })
     contadorCarrito.innerText = carrito.reduce((acc, prod) => acc += prod.cantidad, 0)
+    
     total.innerText = carrito.reduce((acc, prod) => acc += prod.precio * prod.cantidad, 0)
+    localStorage.setItem('totalCarrito',JSON.stringify(total))
 }        
 
 //eliminar Item del Carrito
@@ -88,14 +95,13 @@ const eliminarItem = (itemEl) => {
     const itemparaEliminar = carrito.find(el => el.codArt == itemEl)
     itemparaEliminar.cantidad--
     //lo guardo en el local Storage
-    localStorage.setItem('carrito', JSON.stringify(carrito))
-    if (itemparaEliminar === 0) {
+    localStorage.setItem('carritoCompra', JSON.stringify(carrito))
+    if (itemparaEliminar.cantidad === 0) {
         const indice = carrito.indexOf(itemparaEliminar)
         carrito.splice(indice,1)
     }
 actualizaCarrito()
 }
-
 
 
 
@@ -155,3 +161,5 @@ filtroPrecio.addEventListener('click', () => {
         console.log(filtroPrecioMin.value)
         console.log(filtroPrecioMax.value)
 })
+
+

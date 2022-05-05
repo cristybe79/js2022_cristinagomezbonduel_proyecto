@@ -5,35 +5,7 @@ const contenedorCategory1 = document.getElementById('category1')
 const catalogoHogar1 = JSON.parse(localStorage.getItem("catalogoCompleto"))
 console.log(catalogoHogar1)
 
-///Mostrar catalogo
-const mostrarCategoriasDecoracion = () => {
-    const filtrado = catalogoHogar1.filter((producto) => producto.categoria === "Decoracion")
-console.log(filtrado)
-contenedorCategory1.innerHTML = ''
-filtrado.forEach((cat) => {
-    const div = document.createElement('div')
-    div.innerHTML = `
-    <img src = ${cat.img} alt="${cat.tipo}"/>                
-    `
-    contenedorCategory1.appendChild(div)
-})
-}
-mostrarCategoriasDecoracion()
 
-const contenedorCategory = document.getElementById('category2')
-const mostrarCategoriasIluminacion = () => {
-const filtrado = catalogoHogar1.filter((producto) => producto.categoria === "Iluminacion")
-console.log(filtrado)
-contenedorCategory.innerHTML = ''
-filtrado.forEach((cat) => {
-    const div = document.createElement('div')
-    div.innerHTML = `
-    <img src = ${cat.img} alt="${cat.tipo}"/>                
-    `
-    contenedorCategory.appendChild(div)
-})
-}
-mostrarCategoriasIluminacion()
 
 
 //===============login usuario//

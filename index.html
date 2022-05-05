@@ -9,6 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/e939ecd126.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <title>Sweet Home</title>
 </head>
 
@@ -17,7 +19,7 @@
         <div class="imagenInicial">
             <nav>
                 <ul class="menuNavegacion">
-                    <li><a href="./catalogo.html">Catalogo</a></li>
+                    <li></li>
                     <button class="abrirLogin"><i class="fas fa-user"></i></button>
                 </ul>
             </nav>
@@ -34,22 +36,28 @@
                 <span id="mailValido">ingrese un correo.</span>
                 <h5 id="registroExito" class="noMostrar">Registro Exitoso</h5>
             <div>
-                <button id="suscripcion" type="submit">Suscribirse</button>
-                <button id="cerrarLogin">Cerrar</button>
-                <button id="cerrarLogin">Cancelar</button>
+                <button id="suscripcion" type="submit" class="btn btn-secondary">Suscribirse</button>
+                <button id="cerrarLogin" class="btn btn-secondary">Cerrar</button>
+                <button id="cerrarLogin" class="btn btn-secondary">Cancelar</button>
             </div>
             </div>
         </form>
-        <div class="carrusel">
-            <h3>DECORACION</h3>
-            <h4>Almohadones</h4>
-            <div id="category1" class="lineaSeccion">
-        </div>
-        <div class="carrusel2">
-            <h3>DECORACION</h3>
-            <h4>Iluminacion</h4>
-            <div id="category2" class="lineaSeccion">
+        <div class="inicioDos">
+            <h2><a href="./catalogo.html">CATALOGO</a></h2>
+            <div class="categoria" >
+                <h4 class="tipo">Decoracion
+                    <img class="img_categoria" src="./img/f001.jpeg" alt="">
+                </h4>
+                <h4 class="tipo">Iluminacion
+                    <img class="img_categoria" src="./img/i008.jpg" alt="">
+                </h4>
+                <h4 class="tipo">Muebles
+                    <img class="img_categoria" src="./img/so001.jpg" alt="">
+                    </h4>
             </div>
+
+        </div>
+
         </main>
         <div>
         </div>
@@ -69,6 +77,7 @@
     </div>
     <div>REALIZADO POR</div>
 </footer>
+
 <script src="main.js"></script>
 </body>
 
