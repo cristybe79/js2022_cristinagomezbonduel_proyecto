@@ -11,13 +11,55 @@ const catalogoHogar1 = JSON.parse(localStorage.getItem("catalogoCompleto"))
 console.log(catalogoHogar1)
 
 const carrito = []
+// =================filtros
+
+const filtroCategoria = document.getElementById('filtroCategoria')
+const filtroPrecioMin = document.getElementById('filtroPrecioMin')
+const filtroPrecioMax = document.getElementById('filtroPrecioMax')
+const filtroPrecio = document.getElementById('filtroPrecio')
+let arrayFiltrado = catalogoHogar1
+
+let valorFiltroCategoria = filtroCategoria.value
+let valorFiltroPrecioMin = filtroPrecioMin.value
+let valorFiltroPrecioMax = filtroPrecioMax.value
+
+
+
+const filtrar = () => {
+    if (valorFiltroCategoria == "0" && valorFiltroPrecioMin == 0 && valorFiltroPrecioMax == 0) {
+        arrayFiltrado = catalogoHogar1
+
+    } else {
+        arrayFiltrado = catalogoHogar1.filter(el => el.categoria == filtroCategoria.value)
+        console.log(arrayFiltrado)
+    }
+
+    if (filtroPrecioMin.value > 0) {
+        arrayFiltrado = arrayFiltrado.filter((el) => el.precio >= filtroPrecioMin.value)
+    }
+    if (filtroPrecioMax.value > 0) {
+        arrayFiltrado = arrayFiltrado.filter((el) => el.precio <= filtroPrecioMax.value)
+    }
+    mostrarCatalogo(arrayFiltrado)
+    console.log(arrayFiltrado)
+}
+
+filtroCategoria.addEventListener('change', () => {
+    filtrar()
+
+})
+filtroPrecio.addEventListener('click', () => {
+    filtrar()
+    console.log(filtroPrecioMin.value)
+    console.log(filtroPrecioMax.value)
+})
 
 
 ///recorre array catalogo para mostrarlo en card
-const mostrarCatalogo = (array) => {
+const mostrarCatalogo = () => {
     contenedorProductos.innerHTML=" "
 
-    array.forEach((producto) => {
+    arrayFiltrado.forEach((producto) => {
     const div = document.createElement('div')
     div.className = "estiloCard"
     div.innerHTML = `
@@ -36,7 +78,7 @@ const mostrarCatalogo = (array) => {
     contenedorProductos.appendChild(div)
 })
 }
-mostrarCatalogo(catalogoHogar1)
+mostrarCatalogo(arrayFiltrado)
 
 
 //agregar al Carrito
@@ -62,8 +104,13 @@ const agregarCarrito = (itemAgregado) => {
         })
     }
 
-    Swal.fire('Producto Agregado Correctamente')
-    actualizaCarrito()
+    Swal.fire({
+        text: 'Producto Agregado Correctamente',
+        background: 'rgba(163, 156, 136, 0.98)',
+        confirmButtonColor: 'rgb(80, 77, 68)',
+    })
+    
+        actualizaCarrito()
 }
 const actualizaCarrito = () => {
     agregaCarrito.innerHTML = ""
@@ -118,48 +165,6 @@ modalAbrir.addEventListener('click', () => {
 
 modalCerrar.addEventListener('click', () => {
     modalContenedor.classList.remove('modal-active')
-})
-// =================filtros
-
-const filtroCategoria = document.getElementById('filtroCategoria')
-const filtroPrecioMin = document.getElementById('filtroPrecioMin')
-const filtroPrecioMax = document.getElementById('filtroPrecioMax')
-const filtroPrecio = document.getElementById('filtroPrecio')
-let arrayFiltrado = []
-
-let valorFiltroCategoria = filtroCategoria.value
-let valorFiltroPrecioMin = filtroPrecioMin.value
-let valorFiltroPrecioMax = filtroPrecioMax.value
-
-
-
-const filtrar = () => {
-    if (valorFiltroCategoria == "0") {
-        arrayFiltrado = catalogoHogar1
-        
-    } else {
-        arrayFiltrado = catalogoHogar1.filter(el => el.categoria == filtroCategoria.value)
-        console.log(arrayFiltrado)
-    }
-    
-    if (filtroPrecioMin.value > 0  ) {
-        arrayFiltrado = arrayFiltrado.filter((el) => el.precio >= filtroPrecioMin.value)
-    }
-    if (filtroPrecioMax.value > 0) {
-        arrayFiltrado = arrayFiltrado.filter((el) => el.precio <= filtroPrecioMax.value)
-    }
-    mostrarCatalogo(arrayFiltrado)
-    console.log(arrayFiltrado)
-}
-
-filtroCategoria.addEventListener('change', () => {
-    filtrar()
-
-})
-filtroPrecio.addEventListener('click', () => {
-    filtrar()
-        console.log(filtroPrecioMin.value)
-        console.log(filtroPrecioMax.value)
 })
 
 
