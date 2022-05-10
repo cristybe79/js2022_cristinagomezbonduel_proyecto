@@ -1,16 +1,36 @@
 
 const contenedorProductos = document.getElementById('catalogoCompleto')
-const btnsuma = document.querySelector('#btnsuma') 
+const btnsuma = document.querySelector('#btnsuma')
 ///carrito
 const agregaCarrito = document.getElementById('agrega-carrito')
 const contadorCarrito = document.getElementById('contadorCarrito')
 const total = document.getElementById('total')
+const container = document.querySelector(".container");
+const btndato = document.querySelector(".btnDato")
 
 //lo traigo desde bd
-const catalogoHogar1 = JSON.parse(localStorage.getItem("catalogoCompleto"))
-console.log(catalogoHogar1)
+let catalogoHogar1 = []
+// console.log(catalogoHogar1)
 
 const carrito = []
+//
+
+fetch("base.json")
+    .then(response => response.json())
+    .then((data) => {
+        console.log(data)
+        catalogoHogar1 = data
+        mostrarCatalogo(catalogoHogar1)
+
+    })
+    .catch(error => console.log(error))
+
+
+
+
+
+
+
 // =================filtros
 
 const filtroCategoria = document.getElementById('filtroCategoria')
@@ -41,7 +61,7 @@ const filtrar = () => {
         arrayFiltrado = arrayFiltrado.filter((el) => el.precio <= filtroPrecioMax.value)
     }
     mostrarCatalogo(arrayFiltrado)
-    console.log(arrayFiltrado)
+
 }
 
 filtroCategoria.addEventListener('change', () => {
@@ -56,13 +76,13 @@ filtroPrecio.addEventListener('click', () => {
 
 
 ///recorre array catalogo para mostrarlo en card
-const mostrarCatalogo = () => {
-    contenedorProductos.innerHTML=" "
+const mostrarCatalogo = (array) => {
+    contenedorProductos.innerHTML = " "
 
-    arrayFiltrado.forEach((producto) => {
-    const div = document.createElement('div')
-    div.className = "estiloCard"
-    div.innerHTML = `
+    array.forEach((producto) => {
+        const div = document.createElement('div')
+        div.className = "estiloCard"
+        div.innerHTML = `
     <div>
     <img src = ${producto.img}    class="card-img-top" alt = "${producto.tipo}" >
     </div>
@@ -75,8 +95,8 @@ const mostrarCatalogo = () => {
         </div>                
         `
 
-    contenedorProductos.appendChild(div)
-})
+        contenedorProductos.appendChild(div)
+    })
 }
 mostrarCatalogo(arrayFiltrado)
 
@@ -94,14 +114,14 @@ const agregarCarrito = (itemAgregado) => {
 
         carrito.push({
             codArt: producto.codArt,
-            img:producto.img,
+            img: producto.img,
             categoria: producto.categoria,
-            descripcion:producto.descripcion,
+            descripcion: producto.descripcion,
             tipo: producto.tipo,
             precio: producto.precio,
             cantidad: 1
-            
         })
+        localStorage.setItem('carritoCompra', JSON.stringify(carrito))
     }
 
     Swal.fire({
@@ -109,9 +129,15 @@ const agregarCarrito = (itemAgregado) => {
         background: 'rgba(163, 156, 136, 0.98)',
         confirmButtonColor: 'rgb(80, 77, 68)',
     })
-    
-        actualizaCarrito()
+
+    actualizaCarrito()
 }
+
+///guardo en localstorage
+localStorage.setItem('carritoCompra', JSON.stringify(carrito))
+console.log(carrito)
+
+
 const actualizaCarrito = () => {
     agregaCarrito.innerHTML = ""
     carrito.forEach((prod) => {
@@ -132,10 +158,10 @@ const actualizaCarrito = () => {
         agregaCarrito.appendChild(div)
     })
     contadorCarrito.innerText = carrito.reduce((acc, prod) => acc += prod.cantidad, 0)
-    
+
     total.innerText = carrito.reduce((acc, prod) => acc += prod.precio * prod.cantidad, 0)
-    localStorage.setItem('totalCarrito',JSON.stringify(total))
-}        
+
+}
 
 //eliminar Item del Carrito
 const eliminarItem = (itemEl) => {
@@ -145,15 +171,15 @@ const eliminarItem = (itemEl) => {
     localStorage.setItem('carritoCompra', JSON.stringify(carrito))
     if (itemparaEliminar.cantidad === 0) {
         const indice = carrito.indexOf(itemparaEliminar)
-        carrito.splice(indice,1)
+        carrito.splice(indice, 1)
     }
-actualizaCarrito()
+    actualizaCarrito()
 }
 
 
 
 
-        //========================= modales
+//========================= modales
 const modalAbrir = document.getElementById('modalAbrirCarrito')
 const modalCerrar = document.getElementById('modal-cerrar')
 const modalContenedor = document.getElementsByClassName('modal-contenedor')[0]

@@ -55,6 +55,7 @@ footer {
 main {
     min-height: 70vh;
     background-color: rgba(163, 156, 136, 0.448);
+    padding-top: 1vh;
 }
 
 section {

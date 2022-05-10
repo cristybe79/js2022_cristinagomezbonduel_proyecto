@@ -1,0 +1,356 @@
+[
+    {
+        "codArt": "01",
+        "categoria": "Decoracion",
+        "tipo": "almohadon",
+        "descripcion": "rayado-azul",
+        "stock": 20,
+        "precio": 1000,
+        "costo": 700,
+        "img": "./img/a0011.jpg"
+    },
+    {
+        "codArt": "02",
+        "categoria": "Decoracion",
+        "tipo": "almohadon",
+        "descripcion": "rayado-negro-gris",
+        "stock": 15,
+        "precio": 1000,
+        "costo": 700,
+        "img": "./img/a0012.jpg"
+    },
+    {
+        "codArt": "03",
+        "categoria": "Decoracion",
+        "tipo": "almohadon",
+        "descripcion": "set almohadones",
+        "stock": 17,
+        "precio": 3000,
+        "costo": 2200,
+        "img": "./img/a003.jpg"
+    },
+    {
+        "codArt": "04",
+        "categoria": "Decoracion",
+        "tipo": "almohadon",
+        "descripcion": "estampado-paris",
+        "stock": 13,
+        "precio": 1500,
+        "costo": 1100,
+        "img": "./img/a004.jpg"
+    },
+    {
+        "codArt":"05",
+        "categoria": "Decoracion",
+        "tipo": "almohadon",
+        "descripcion": "liso beige",
+        "stock": 11,
+        "precio": 1500,
+        "costo": 1100,
+        "img": "./img/a005.jpg"
+    },
+    {
+        "codArt": "06",
+        "categoria": "Decoracion",
+        "tipo": "almohadon",
+        "descripcion": "liso gris",
+        "stock": 10,
+        "precio": 1500,
+        "costo": 1100,
+        "img": "./img/a006.jpg"
+    },
+    {
+        "codArt": "07",
+        "categoria": "Iluminacion",
+        "tipo": "Lampara de pie",
+        "descripcion": "base madera",
+        "stock": 10,
+        "precio": 7000,
+        "costo": 6000,
+        "img": "./img/i001.jpg"
+    },
+    {
+        "codArt": "08",
+        "categoria": "Iluminacion",
+        "tipo": "Lampara Colgante Techo",
+        "descripcion": "red negra moderna",
+        "stock": 15,
+        "precio": 3000,
+        "costo": 2000,
+        "img": "./img/i002.jpg"
+    },
+    {
+        "codArt": "09",
+        "categoria": "Iluminacion",
+        "tipo": "Lampara Colgante Techo",
+        "descripcion": "clasica",
+        "stock": 5,
+        "precio": 10000,
+        "costo": 9000,
+        "img": "./img/i003.jpg"
+    },
+    {
+        "codArt": "10",
+        "categoria": "Iluminacion",
+        "tipo": "Lampara Colgante Techo",
+        "descripcion": "modera edison redondas",
+        "stock": 5,
+        "precio": 12000,
+        "costo": 10000,
+        "img": "./img/i004.jpg"
+    },
+    {
+        "codArt": "11",
+        "categoria": "Iluminacion",
+        "tipo": "Lampara Velador",
+        "descripcion": "base metal blanco",
+        "stock": 25,
+        "precio": 2000,
+        "costo": 1500,
+        "img": "./img/i005.jpg"
+    },
+    {
+        "codArt": "12",
+        "categoria": "Iluminacion",
+        "tipo": "Lampara Velador",
+        "descripcion": "base madera blanco",
+        "stock": 20,
+        "precio": 2500,
+        "costo": 1700,
+        "img": "./img/i006.jpg"
+    },
+    {
+        "codArt": "13",
+        "categoria": "Muebles",
+        "tipo": "Mesa",
+        "descripcion": "base blanca moderna",
+        "stock": 2,
+        "precio": 10000,
+        "costo": 9000,
+        "img": "./img/m001.jpg"
+    },
+    {
+        "codArt": "14",
+        "categoria": "Muebles",
+        "tipo": "Mesa",
+        "descripcion": "madera hogar",
+        "stock": 2,
+        "precio": 12300,
+        "costo": 10000,
+        "img": "../img/m002.jpg"
+    },
+    {
+        "codArt": "15",
+        "categoria": "Muebles",
+        "tipo": "Mesa",
+        "descripcion": "diseño",
+        "stock": 2,
+        "precio": 25000,
+        "costo": 23000,
+        "img": "../img/m003.jpg"
+    },
+    {
+        "codArt": "16",
+        "categoria": "Muebles",
+        "tipo": "Mesa",
+        "descripcion": "madera y hierro industrial",
+        "stock": 5,
+        "precio": 15000,
+        "costo": 13000,
+        "img": "../img/m004.jpg"
+    },
+    {
+        "codArt": "17",
+        "categoria": "Muebles",
+        "tipo": "Mesa",
+        "descripcion": "redonda diseño industrial",
+        "stock": 3,
+        "precio": 15000,
+        "costo": 13000,
+        "img": "../img/m005.jpg"
+    },
+    {
+        "codArt": "18",
+        "categoria": "Muebles",
+        "tipo": "Mesa",
+        "descripcion": "recibidor ebano",
+        "stock": 6,
+        "precio": 9000,
+        "costo": 7000,
+        "img": "../img/m006.jpg"
+    },
+    {
+        "codArt": "19",
+        "categoria": "Muebles",
+        "tipo": "Mesa",
+        "descripcion": "recibidor industrial",
+        "stock": 5,
+        "precio": 8500,
+        "costo": 7000,
+        "img": "../img/m009.jpg"
+    },
+    {
+        "codArt": "20",
+        "categoria": "Muebles",
+        "tipo": "Mesa",
+        "descripcion": "madera peral",
+        "stock": 6,
+        "precio": 18000,
+        "costo": 17000,
+        "img": "../img/m007.jpg"
+    },
+    {
+        "codArt": "21",
+        "categoria": "Muebles",
+        "tipo": "Mesa",
+        "descripcion": "redonda peral",
+        "stock": 5,
+        "precio": 17500,
+        "costo": 16500,
+        "img": "../img/m008.jpg"
+    },
+    {
+        "codArt": "22",
+        "categoria": "Muebles",
+        "tipo": "Silla",
+        "descripcion": "tapizao arena",
+        "stock": 12,
+        "precio": 6500,
+        "costo": 5500,
+        "img": "../img/s001.jpg"
+    },
+    {
+        "codArt": "23",
+        "categoria": "Muebles",
+        "tipo": "Silla",
+        "descripcion": "blanca metal",
+        "stock": 12,
+        "precio": 4000,
+        "costo": 3000,
+        "img": "./img/s002.jpg"
+    },
+    {
+        "codArt": "24",
+        "categoria": "Muebles",
+        "tipo": "Silla",
+        "descripcion": "señorial",
+        "stock": 12,
+        "precio": 6500,
+        "costo": 5500,
+        "img": "./img/s003.jpg"
+    },
+    {
+        "codArt": "25",
+        "categoria": "Muebles",
+        "tipo": "Silla",
+        "descripcion": "tapizado estampado",
+        "stock": 10,
+        "precio": 6000,
+        "costo": 5000,
+        "img": "./img/s0041.jpg"
+    },
+    {
+        "codArt": "26",
+        "categoria": "Muebles",
+        "tipo": "Silla",
+        "descripcion": "madera negra y asiento blanco",
+        "stock": 12,
+        "precio": 5000,
+        "costo": 4000,
+        "img": "./img/s005.jpg"
+    },
+    {
+        "codArt": "27",
+        "categoria": "Muebles",
+        "tipo": "Sillon",
+        "descripcion": "gris esquinero",
+        "stock": 2,
+        "precio": 70000,
+        "costo": 65000,
+        "img": "../img/so001.jpg"
+    },
+    {
+        "codArt": "28",
+        "categoria": "Muebles",
+        "tipo": "Sillon",
+        "descripcion": "gris cuero",
+        "stock": 2,
+        "precio": 48000,
+        "costo": 43000,
+        "img": "../img/so002.jpg"
+    },
+    {
+        "codArt": "29",
+        "categoria": "Muebles",
+        "tipo": "Sillon",
+        "descripcion": "gris claro",
+        "stock": 2,
+        "precio": 54000,
+        "costo": 50000,
+        "img": "../img/so003.jpg"
+    },
+    {
+        "codArt": "30",
+        "categoria": "Muebles",
+        "tipo": "Sillon",
+        "descripcion": "turquez lino",
+        "stock": 2,
+        "precio": 38000,
+        "costo": 33000,
+        "img": "../img/so004.jpg"
+    },
+    {
+        "codArt": "31",
+        "categoria": "Muebles",
+        "tipo": "Sillon",
+        "descripcion": "blanco moderno",
+        "stock": 2,
+        "precio": 47000,
+        "costo": 42000,
+        "img": "../img/so005.jpg"
+    },
+    {
+        "codArt": "32",
+        "categoria": "Muebles",
+        "tipo": "Sillon",
+        "descripcion": "rojo cuero",
+        "stock": 2,
+        "precio": 43000,
+        "costo": 39000,
+        "img": "../img/so006.jpg"
+    },
+    {
+        "codArt": "33",
+        "categoria": "Muebles",
+        "tipo": "Sillon",
+        "descripcion": "blanco esquinero",
+        "stock": 2,
+        "precio": 68000,
+        "costo": 65000,
+        "img": "../img/so007.jpg"
+    },
+    {
+        "codArt": "34",
+        "categoria": "Decoracion",
+        "tipo": "Adornos",
+        "descripcion": "Set Floreros",
+        "stock": 23,
+        "precio": 1200,
+        "costo": 1000,
+        "img": "../img/f001.jpeg"
+    },
+    {
+        "codArt": "35",
+        "categoria": "Decoracion",
+        "tipo": "Adornos",
+        "descripcion": "Set Floreros",
+        "stock": 25,
+        "precio": 1200,
+        "costo": 1000,
+        "img": "../img/fl002.jpg"
+    }
+
+
+
+
+]

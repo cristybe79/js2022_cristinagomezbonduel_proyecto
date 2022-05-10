@@ -26,18 +26,27 @@
         <main>
             <div class="fondoOrdenCompra">
                 <div id="ordenCompra" class="bodyCompra">
-                    
-                </div>
-                <div class="bodyCompra">
-            <h5 class="TituloDetail">Condiciones de Envio</h5>
-            <p class="TextDetail">- Envios a todo el pais</p>
-            <p class="TextDetail">- Costos: consultar segun tabla</p>
-            <p class="TextDetail">
-                - Devolucion: dentro de las 48hs de llegada de la mercaderia
-            </p>
                 </div>
 
+                <div class="bodyCompra">
+                    <h5 class="TituloDetail">Condiciones de Envio</h5>
+                    <select name="" id="envios">
+                        <option value="0">Gran Buenos Aires</option>
+                        <option value="1">Resto del Pais</option>
+                    </select>
+                    <p class="TextDetail">- Envios a todo el pais </p>
+                    <p class="TextDetail">
+                        - Devolucion: dentro de las 48hs de llegada de la mercaderia
+                    </p>
+                    <button id="apiMercadoPago" class="btn btn-secondary">Finalizar Compra</button>
+                </div>
             </div>
+            <div class="fondoOrdenCompra">
+                <h3>
+                <p id="totalResumen">$Total Compra</p>
+                </h3>
+            </div>
+
         </main>
         <script src="ordenCompra.js"></script>
 </body>
