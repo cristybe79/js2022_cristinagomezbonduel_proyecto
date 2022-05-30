@@ -1,53 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./catalogo.css" />
-        <link rel="stylesheet" href="./ordenCompra.css" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-        <script src="https://kit.fontawesome.com/e939ecd126.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./asset/catalogo.css" />
+    <link rel="stylesheet" href="./asset/ordenCompra.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/e939ecd126.js" crossorigin="anonymous"></script>
     <title>Forma de Pago</title>
 </head>
+
 <body>
-        <header>
-            <div class="imagenHeader">
-                <nav>
-                    <ul class="menuNavegacion">
-                        <li><a href="./index.html">Inicio</a></li>
-                    </ul>
-        
-                </nav>
-                <img class="imgLogo" src="./img/logo1sf.png" alt="logo" />
-            </div>
-        </header>
-        <main>
-            <div class="fondoOrdenCompra">
-                <div id="ordenCompra" class="bodyCompra">
-                </div>
+    <header>
+        <div class="imagenHeader">
+            <nav>
+                <ul class="menuNavegacion">
+                    <li><a href="./index.html">Inicio</a></li>
+                </ul>
 
-                <div class="bodyCompra">
-                    <h5 class="TituloDetail">Condiciones de Envio</h5>
-                    <select name="" id="envios">
-                        <option value="0">Gran Buenos Aires</option>
-                        <option value="1">Resto del Pais</option>
-                    </select>
-                    <p class="TextDetail">- Envios a todo el pais </p>
-                    <p class="TextDetail">
-                        - Devolucion: dentro de las 48hs de llegada de la mercaderia
-                    </p>
-                    <button id="apiMercadoPago" class="btn btn-secondary">Finalizar Compra</button>
-                </div>
+            </nav>
+            <img class="imgLogo" src="./img/logo1sf.png" alt="logo" />
+        </div>
+    </header>
+    <main>
+        <div class="fondoOrdenCompra">
+            <div id="ordenCompra" class="bodyCompra">
             </div>
-            <div class="fondoOrdenCompra">
-                <h3>
+
+            <div class="bodyCompra">
+                <h5 class="TituloDetail">Condiciones de Envio</h5>
+                <select name="" id="envios">
+                    <option value="0">Gran Buenos Aires</option>
+                    <option value="1">Resto del Pais</option>
+                </select>
+                <p class="TextDetail">- Envios a todo el pais </p>
+                <p class="TextDetail">
+                    - Devolucion: dentro de las 48hs de llegada de la mercaderia
+                </p>
+                <button id="apiMercadoPago" class="btn btn-secondary">Finalizar Compra</button>
+            </div>
+        </div>
+        <div class="fondoOrdenCompra">
+            <h3>
                 <p id="totalResumen">$Total Compra</p>
-                </h3>
-            </div>
+            </h3>
+        </div>
 
-        </main>
-        <script src="ordenCompra.js"></script>
+    </main>
+    <script src="ordenCompra.js"></script>
 </body>
+
 </html>

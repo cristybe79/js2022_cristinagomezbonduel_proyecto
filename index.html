@@ -5,12 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./asset/styles.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/e939ecd126.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+
     <title>Sweet Home</title>
 </head>
 
@@ -19,65 +20,122 @@
         <div class="imagenInicial">
             <nav>
                 <ul class="menuNavegacion">
-                    <li></li>
-                    <button class="abrirLogin"><i class="fas fa-user"></i></button>
+                    <button class="abrirForm" id="abrirLogin">
+                        <i class="fas fa-user"> login</i>
+                    </button>
+
+                    <button class="abrirForm" id="abrirRegistro">
+                        <i class="fas fa-user"> Registrarse</i>
+                    </button>
+                    <div id="registroUsuario"></div>
                 </ul>
             </nav>
-            <img class="imgLogo" src="./img/logo1sf.png" alt="logo">
+            <img class="imgLogo" src="./img/logo1sf.png" alt="logo" />
         </div>
     </header>
     <main>
-        <form class="login" id="formulario" >
-            <div class="modal-carrito" >
-                <h3>Registracion</h3>
-                <input type="text" placeholder="nombre" id="nombre">
+        <form class="login" id="formularioIngreso">
+            <div class="modal-carrito">
+                <h3>Ingreso Usuario</h3>
+                <input type="text" placeholder="nombreUsuario" id="nombreUsuarioRegistrado" />
                 <span id="nombreValido">ingrese un nombre</span>
-                <input type="email" placeholder="email" name="email" id="email">
+                <input type="email" placeholder="email" name="email" id="emailRegistrado" />
+                <span id="mailValido">ingrese un correo.</span>
+                <div>
+                    <button id="ingresaSesion" class="btn btn-secondary">Ingresar</button>
+                    <button id="cerrarLogin" class="btn btn-secondary">Cerrar</button>
+                </div>
+            </div>
+        </form>
+        <form class="signIn" id="formularioRegistracion">
+            <div class="modal-carrito">
+                <h3>Registracion</h3>
+                <input type="text" placeholder="Nombre Completo" id="nombreCompleto" />
+                <span id="nombreValido">ingrese un nombre</span>
+                <input type="text" placeholder="userName" id="userName" />
+                <span id="userNameValido">valido 5 caracteres</span>
+                <input type="email" placeholder="email" name="email" id="email" />
                 <span id="mailValido">ingrese un correo.</span>
                 <h5 id="registroExito" class="noMostrar">Registro Exitoso</h5>
-            <div>
-                <button id="suscripcion" type="submit" class="btn btn-secondary">Suscribirse</button>
-                <button id="cerrarLogin" class="btn btn-secondary">Cerrar</button>
-                <button id="cerrarLogin" class="btn btn-secondary">Cancelar</button>
-            </div>
+                <div>
+                    <button id="suscripcion" type="submit" class="btn btn-secondary">Registrarse</button>
+                    <button id="cerrarRegistro" class="btn btn-secondary">Cerrar</button>
+                </div>
             </div>
         </form>
         <div class="inicioDos">
             <h2><a href="./catalogo.html">CATALOGO</a></h2>
-            <div class="categoria" >
-                <h4 class="tipo">Decoracion
-                    <img class="img_categoria" src="./img/f001.jpeg" alt="">
-                </h4>
-                <h4 class="tipo">Iluminacion
-                    <img class="img_categoria" src="./img/i008.jpg" alt="">
-                </h4>
-                <h4 class="tipo">Muebles
-                    <img class="img_categoria" src="./img/so001.jpg" alt="">
-                    </h4>
-            </div>
+        
+            <div class="carruselInicio">
+                <div class="carouselContenedor">
+                    <button aria-label="Anterior" class="carouselBtnAnterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carouselLista">
+                        <div class="carruselElemento">
+                            <img src="./img/a001.jpg" alt="ALMOHADON">
+                        </div>
+                        <div class="carruselElemento">
+                            <img src="./img/fl002.jpg" alt="FLOREROS">
+                        </div>
+                        <div class="carruselElemento">
+                            <img src="./img/i004.jpg" alt="ILUMINACION">
+                        </div>
+                        <div class="carruselElemento">
+                            <img src="./img/s004.jpg" alt="SILLA">
+                        </div>
+                        <div class="carruselElemento">
+                            <img src="./img/m001.jpg" alt="MESA">
+                        </div>
+                        <div class="carruselElemento">
+                            <img src="./img/so001.jpg" alt="SILLON">
+                        </div>
+                        <div class="carruselElemento">
+                            <img src="./img/f001.jpeg" alt="FLORERO">
+                        </div>
+                        <div class="carruselElemento">
+                            <img src="./img/s003.jpg" alt="SILLA">
+                        </div>
+                        <div class="carruselElemento">
+                            <img src="./img/i008.jpg" alt="ILUMINACION">
+                        </div>
+                        <div class="carruselElemento">
+                            <img src="./img/a004.jpg" alt="ALMOHADON">
+                        </div>
+                        <div class="carruselElemento">
+                            <img src="./img/so002.jpg" alt="SILLON">
+                        </div>
+                    </div>
 
+                    <button aria-label="Siguiente" class="carouselBtnSiguiente">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div role="tablist" class="carousel__indicadores"></div>
+            </div>
         </div>
+
+
+
+
 
     </main>
-    
+
     <footer>
-        <div class="row footerContactoLegal " >
+        <div class="row footerContactoLegal">
             <div>
-                <p></p>
-                <input  class="col-1" type="text">
+                <input class="col-1" type="text" />
             </div>
-            
         </div>
-        
+
         <div class="row">
             <div class="col">
-                <img class="imgLogo" src="./img/logo1sf.png" alt="logo">
+                <img class="imgLogo" src="./img/logo1sf.png" alt="logo" />
             </div>
             <div class="col">
                 <h6>SOBRE NOSOTROS</h6>
                 <h6>POLITICAS DE PRIVACIDAD</h6>
                 <h6>POLITICAS DE COOKIES</h6>
-                
             </div>
             <div class="col">
                 <h6>PREGUNTAS FRECUENTES</h6>
@@ -87,11 +145,13 @@
                 <h6>ESTAMOS EN</h6>
             </div>
         </div>
-        <div class="col ft-copy"><p>©COPYRIGHT</p></div>
-
-</footer>
-
-<script src="main.js"></script>
+        <div class="col ft-copy">
+            <p>©COPYRIGHT</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
 </body>
 
-</html> 
+</html>

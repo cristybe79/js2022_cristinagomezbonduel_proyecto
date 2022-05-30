@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration-line: none;
+}
+
+.imgLogo {
+    width: 20vh;
+}
+
+nav {
+    background-color: rgba(163, 156, 136, 0.98);
+    height: 7vh;
+}
+
+.footerContactoLegal {
+    display: grid;
+    grid-template-columns: repeat (4, 1fr);
+}
+
+.fclegal {
+    display: grid;
+    width: 10v;
+}
+
+.menuNavegacion {
+    list-style-type: none;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    padding-left: 30vw;
+    padding-top: 2vh;
+}
+
+a {
+    color: rgb(41, 43, 44) !important;
+    text-decoration: none !important;
+}
+
+body {
+    background-color: rgb(253, 253, 253);
+}
+
+header {
+    background-color: rgba(163, 156, 136, 0.753);
+    min-height: 10vh;
+}
+
+.footerContactoLegal {
+    height: 20vh;
+    padding-left: 5vw;
+}
+
+footer {
+    background-color: rgba(163, 156, 136, 0.98);
+    min-height: 50vh;
+}
+
+.ft-copy {
+    margin: 1%;
+    height: 1vh;
+}
+
+/* ESTILO PAGINA INICIO*/
+
+.imagenInicial {
+    background-image: url("../img/nav01.jpg");
+
+    min-height: 100vh;
+}
+
+main {
+    min-height: 70vh;
+}
+
+
+
+/* CARRUSEL INGRESO A CATALOGO*/
+h1 {
+    text-align: center;
+}
+
+.inicioDos {
+    height: 70vh;
+    background-color: rgba(163, 156, 136, 0.839);
+    display: flex;
+    align-items: center;
+
+}
+
+
+h2 {
+    align-items: center;
+    margin-left: 10vw;
+    color: rgb(41, 43, 44, 0.25)
+}
+
+h2:hover {
+    opacity: 50%;
+}
+
+.carruselInicio {
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+
+}
+
+
+
+
+/* --- --- CAROUSEL --- --- */
+.carouselContenedor {
+    position: relative;
+}
+
+.carouselBtnAnterior,
+.carouselBtnSiguiente {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: none;
+    top: calc(50% - 35px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background: none;
+    color: rgb(95, 92, 82);
+    opacity: 20%;
+}
+
+.carouselBtnAnterior:hover,
+.carouselBtnSiguiente:hover {
+    opacity: 100%;
+}
+
+.carouselBtnAnterior {
+    left: -30px;
+}
+
+.carouselBtnSiguiente {
+    right: -30px;
+}
+
+.carouselLista {
+    overflow: hidden;
+}
+
+.carruselElemento {
+    text-align: center;
+}
+
+.carousel__indicadores .glider-dot {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: rgb(76, 76, 76);
+    opacity: .2;
+    border-radius: 0;
+}
+
+.carousel__indicadores .glider-dot:hover {
+    opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active {
+    opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        padding: 40px 0;
+    }
+}
+
+
+
+
+/* Login usuarios con LOCALSTORAGE*/
+/*para login*/
+
+.login {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+
+.signIn {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+
+.modal-active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 3;
+}
+
+.abrirForm {
+    border: none;
+    background-color: rgb(0, 0, 0, 0);
+    color: aliceblue;
+}
+
+.modal-carrito {
+    position: absolute;
+    min-width: 500px;
+    border-radius: 5px;
+    padding: 22px;
+    background-color: rgba(163, 156, 136, 0.98);
+    display: flex;
+    flex-direction: column;
+}
+
+span {
+    color: red;
+    visibility: hidden;
+}
+
+.error-mostrar {
+    visibility: visible;
+}
+
+.input-error {
+    border: red solid 2px;
+}
+
+.noMostrar {
+    visibility: hidden;
+}

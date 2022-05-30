@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./catalogo.css" />
+    <link rel="stylesheet" href="./asset/catalogo.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/e939ecd126.js" crossorigin="anonymous"></script>
@@ -33,17 +33,17 @@
                 <button id="modal-cerrar"><i class="fas fa-times-circle"></i></button>
                 <div id="agrega-carrito"></div>
                 <div class="compraTotal">Precio Total:
-                <span id="total">
-                </span>
-                <button class="btn btn-secondary"><a href="ordenCompra.html" >Pago</a></button>
+                    <span id="total">
+                    </span>
+                    <button class="btn btn-secondary"><a class="aRef" href="ordenCompra.html">Pago</a></button>
                 </div>
             </div>
         </div>
         <div class="filtrados">
-                            <h1>Catalogo</h1>
+            <h1>Catalogo</h1>
             <div>
                 <h6>Categorias</h6>
-                <select id="filtroCategoria">
+                <select class="form-select" aria-label="Default select example" id="filtroCategoria">
                     <option value="Todos">Todos</option>
                     <option value="Decoracion">Decoracion</option>
                     <option value="Iluminacion">Iluminacion</option>
@@ -52,7 +52,7 @@
             </div>
             <div>
                 <h6>Desde</h6>
-                <select id="filtroPrecioMin">
+                <select class="form-select" aria-label="Default select example" id="filtroPrecioMin">
                     <option value="0">todos</option>
                     <option value="2000">2000</option>
                     <option value="5000">5000</option>
@@ -62,7 +62,7 @@
             </div>
             <div>
                 <h6>Hasta</h6>
-                <select id="filtroPrecioMax">
+                <select class="form-select" aria-label="Default select example" id="filtroPrecioMax">
                     <option value="0">todos</option>
                     <option value="5000">hasta 5000</option>
                     <option value="10000">10000</option>
@@ -70,19 +70,20 @@
                     <option value="25000">25000</option>
                 </select>
             </div>
-            <button id="filtroPrecio" class="btn btn-secondary">Filter</button>
+            <div>
+                <button id="filtroPrecio" type="button" class="btn btn-secondary">Filtrar</button>
+            </div>
             <div>
                 <button id="modalAbrirCarrito" class="fas fa-shopping-cart">
                     <span id="contadorCarrito">0</span>
                 </button>
             </div>
         </div>
-        <button class="btnDato">boton dato</button>
         <div class="container"></div>
         <div id="catalogoCompleto"></div>
     </main>
     <footer></footer>
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="catalogo.js"></script>
 </body>
 

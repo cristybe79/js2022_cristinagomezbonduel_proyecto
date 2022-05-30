@@ -15,8 +15,11 @@ nav {
     height: 7vh;
     display: flex;
 }
-
-li a {
+a:link{
+    text-decoration: none;
+    color:black
+}
+a {
     color: aliceblue !important;
     text-decoration: none !important;
 }
@@ -47,7 +50,7 @@ footer {
 }
 
 .imagenHeader {
-    background-image: url("./img/nav01.jpg");
+    background-image: url("../img/nav01.jpg");
     min-height: 25vh;
     background-position: 10%;
 }
@@ -94,18 +97,22 @@ h1 {
     flex-direction: column;
     flex-wrap: wrap;
     min-width: 0;
-    background-color: rgba(163, 156, 136, 0.75);
+    background-color: rgba(255, 255, 255, 0.75);
     background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.125);
+    border: 1px solid rgba(13, 13, 13, 0.125);
     border-radius: 0.25rem;
     width: 16rem;
     margin-bottom: 2vh;
     margin-right: 2vh;
 }
 
+
 .card-img {
     max-width: 200px;
     margin-bottom: 2vh;
+}
+.card-img img:hover{
+    transform:scale(1.5);
 }
 
 .card-Body {
@@ -220,4 +227,7 @@ h1 {
 }
 #filtroCategorias{
     margin: 10px;
+}
+#filtroPrecio{
+    margin-top: 3vh;
 }
