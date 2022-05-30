@@ -46,7 +46,8 @@ let valorFiltroPrecioMax = filtroPrecioMax.value
 
 
 const filtrar = () => {
-    if (valorFiltroCategoria == "0" && valorFiltroPrecioMin == 0 && valorFiltroPrecioMax == 0) {
+
+    if (valorFiltroCategoria === "Todos" && valorFiltroPrecioMin == 0 && valorFiltroPrecioMax == 0) {
         arrayFiltrado = catalogoHogar1
 
     } else {
@@ -55,9 +56,11 @@ const filtrar = () => {
     }
 
     if (filtroPrecioMin.value > 0) {
+
         arrayFiltrado = arrayFiltrado.filter((el) => el.precio >= filtroPrecioMin.value)
     }
     if (filtroPrecioMax.value > 0) {
+
         arrayFiltrado = arrayFiltrado.filter((el) => el.precio <= filtroPrecioMax.value)
     }
     mostrarCatalogo(arrayFiltrado)
@@ -194,3 +197,6 @@ modalCerrar.addEventListener('click', () => {
 })
 
 
+let usuarioLogeado = localStorage.setItem("usuarioRegistrado", JSON.stringify(nombre.value))
+
+console.log(usuarioLogeado)

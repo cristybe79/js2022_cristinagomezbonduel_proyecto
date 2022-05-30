@@ -17,6 +17,9 @@ nav {
 .footerContactoLegal {
     display: grid;
     grid-template-columns: repeat (4, 1fr);
+    width: 20vw;
+    padding-top: 5vh;
+    border-color: rgba(163, 156, 136, 0.98);
 }
 
 .fclegal {
@@ -33,6 +36,8 @@ nav {
     width: 50vw;
     padding-left: 30vw;
     padding-top: 2vh;
+
+
 }
 
 a {
@@ -196,6 +201,7 @@ h2:hover {
     visibility: hidden;
     opacity: 0;
     transition: all 0.5s ease-in;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .signIn {
@@ -211,8 +217,11 @@ h2:hover {
     visibility: hidden;
     opacity: 0;
     transition: all 0.5s ease-in;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
+#registroUsuario{
+    color: aliceblue;
+}
 .modal-active {
     visibility: visible;
     opacity: 1;

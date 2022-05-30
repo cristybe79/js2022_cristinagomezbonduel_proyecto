@@ -79,7 +79,7 @@ const registroExito = document.getElementById('registroExito')
 
 
 
-suscripcion.addEventListener('click', registracion)
+formularioRegistracion.addEventListener('submit', registracion)
 
 function registracion  (e)  {
     e.preventDefault();
@@ -131,11 +131,14 @@ const ingresoUsuario = (e) => {
         console.log(nombreUsuarioRegistrado.value)
         console.log(mailRegistrado.value)
         login.classList.remove('modal-active')
-        registroUsuario.innerHTML = `${nombreUsuarioRegistrado.value}`
+        registroUsuario.innerHTML = `usuario ${nombreUsuarioRegistrado
+.value}`
+        localStorage.setItem("registrado", JSON.stringify(nombreUsuarioRegistrado.value))
     }
 }
 
 formularioIngreso.addEventListener('submit', ingresoUsuario)
+
 
 
 //CARRUSEL///

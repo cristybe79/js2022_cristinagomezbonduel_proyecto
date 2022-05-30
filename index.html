@@ -19,16 +19,18 @@
     <header>
         <div class="imagenInicial">
             <nav>
-                <ul class="menuNavegacion">
+                <div class="menuNavegacion">
                     <button class="abrirForm" id="abrirLogin">
-                        <i class="fas fa-user"> login</i>
+                        <i class="fas fa-user"></i><p>Login</p>
                     </button>
 
                     <button class="abrirForm" id="abrirRegistro">
-                        <i class="fas fa-user"> Registrarse</i>
+                        <i class="fas fa-user"> </i><p>Registrarse</p>
                     </button>
-                    <div id="registroUsuario"></div>
-                </ul>
+                    <div id="registroUsuario">
+                        
+                    </div>
+                </div>
             </nav>
             <img class="imgLogo" src="./img/logo1sf.png" alt="logo" />
         </div>
@@ -100,10 +102,13 @@
                             <img src="./img/i008.jpg" alt="ILUMINACION">
                         </div>
                         <div class="carruselElemento">
-                            <img src="./img/a004.jpg" alt="ALMOHADON">
+                            <img src="./img/a0041.jpg" alt="ALMOHADON">
                         </div>
                         <div class="carruselElemento">
                             <img src="./img/so002.jpg" alt="SILLON">
+                        </div>
+                        <div class="carruselElemento">
+                            <img src="./img/s001.jpg" alt="SILLON">
                         </div>
                     </div>
 
@@ -122,12 +127,14 @@
     </main>
 
     <footer>
+    
         <div class="row footerContactoLegal">
+            <!-- Puesto a modo decorativo -->
             <div>
-                <input class="col-1" type="text" />
+                <input type="email" class="form-control" placeholder="name@example.com" />
+                <button type="button" class="btn btn-secondary">SUSCRIBIRSE</button>
             </div>
         </div>
-
         <div class="row">
             <div class="col">
                 <img class="imgLogo" src="./img/logo1sf.png" alt="logo" />
@@ -140,13 +147,27 @@
             <div class="col">
                 <h6>PREGUNTAS FRECUENTES</h6>
                 <h6>CONTACTO</h6>
+                        <section class="mb-4">
+                            <!-- Facebook -->
+                            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+                        
+                            <!-- Twitter -->
+                            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+                        
+                        
+                            <!-- Instagram -->
+                            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+                        
+                        
+                        </section>
             </div>
             <div class="col">
                 <h6>ESTAMOS EN</h6>
             </div>
         </div>
         <div class="col ft-copy">
-            <p>©COPYRIGHT</p>
+            <p>©COPYRIGHT 2022 - Cristina Gomez</p>
+
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
